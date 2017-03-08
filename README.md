@@ -1,6 +1,9 @@
 # Linerate
 Simple script to calculate an edge above which linerate is possible.
 
+TODO:
+*calculate with ethernet control bits (preamble+SFD, IFG)
+
 Output:
 * helix4_40 | Linerate if packet size is higher than 85
 * helix4_42 | Linerate if packet size is higher than 85
