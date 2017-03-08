@@ -31,11 +31,12 @@ def calc(asicName):
     for size in reversed(range(64,257)):
         #print('Current packet size is {}'.format(size))
         if sw_capacity_bytes / size >= fw_capacity_flat:
+        #if size * fw_capacity_flat <= sw_capacity_bytes:
             a = asicName.center(22, ' ')
             b = str(asics.get(asicName)[0]).center(4, ' ')
             c = str(asics.get(asicName)[1]).center(4, ' ')
             return '[{}] {} Mbps / {} Mpps | Linerate if packet size is higher than {}'.format(a, b, c, size)
-    return 'Something went wrong'
+    return 'Linerate even at 64 bytes packet size'
 #
 if __name__ == "__main__":
     for asic in asics:
